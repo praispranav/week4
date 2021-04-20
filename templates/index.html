@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<br>
+<br>
+<h1>Hello this is the home page {{pran}}</h1>
+<div class="jumbotron">
+    <div class="container">
+        <h3 class="display-3"> Car Dealers </h3>
+        <ul>
+            {% for x in ca %}
+            <li><a href="car/{{x.id}}">{{x.name}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 myhover " style="height:30v;margin-top:10vh;">
+            <a href="django/contact"> <h1 class="display-4" style="height:100%;">Contact</h1></a>
+        </div>
+        <div class="col-sm-6 myhover "  style="height:30v;margin-top:10vh;">
+            <a href="django/about"> <h1 class="display-4" style="height:40vh;margin:auto auto;">About Us</h1></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

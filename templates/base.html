@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav Django Website</title>
+    <style>
+        .myhover{
+            background:rgb(235, 233, 233);
+            color:black;
+        }
+        .myhover:hover{
+            background:white;
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Pranav</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'app1:about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'app1:contact' %}">Contact</a>
+            </li>
+            
+          </ul>
+          <a href="{% url 'app1:login' %}" class="nav-link"><button class="btn btn-secondary">Login</button></a>
+          <a href="{% url 'app1:signup' %}" class="nav-link"><button class="btn btn-secondary">SignUp</button></a>
+          <a href="{% url 'app1:LogOut' %}" class="nav-link"><button class="btn btn-secondary">LogOut</button></a>
+        </div>
+      </nav>
+
+      {% block content %}
+      {% endblock %}
+
+</body>
+</html>

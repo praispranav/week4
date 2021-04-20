@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+        <h4 class="display-2">LogIN</h4>
+    </div>
+    <div class="card-body">
+        <form class="form-group" method="POST">
+            {% csrf_token %}
+            <input placeholder="Username" name="username" class="form-control" type="text" />
+            <input placeholder="Password" id="password1" class="form-control" name="password1" type="text" />
+            <button type="submit" class="btn btn-primary">LogIn</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

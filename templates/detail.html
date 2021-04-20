@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron">
+    <div class="container">
+        {% for x in b %}
+
+        <h1>{{x.name}}</h1>
+        <h5>{{x.cartype}}</h5>
+        <!-- <h5>{{x.cartype}}</h5> -->
+        <h5>{{x.year}}</h5>
+    </div>
+</div>
+<div class="container">
+    <form class="form-group">
+        {{form}}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary">
+    </form>
+</div>
+{% endblock %}
