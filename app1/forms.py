@@ -3,5 +3,5 @@ from .models import carreview
 
 class reviewform(ModelForm):
     class Meta:
-        models = 'carreview'
+        model = carreview
         fields = '__all__'

@@ -113,7 +113,7 @@ def detail(request, com_id):
         'b':b,
         'form':form
     }
-    return render(request, 'detailsd.html', context)
+    return render(request, 'detail.html', context)
 
 # Create a `get_dealer_details` view to render the reviews of a dealer
 # def get_dealer_details(request, dealer_id):
